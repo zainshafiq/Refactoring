@@ -43,3 +43,30 @@ static int testSize = 1000;
         test1.recursiveSum(testSize);
         tEnd = System.nanoTime();
         System.out.println("Strength reduction\n Recursive time:" + (tEnd - tBeg));
+        
+         tBeg = System.nanoTime();
+        test1.unreducedSum(testSize);
+        tEnd = System.nanoTime();
+        System.out.println(" Iterative time:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test1.reducedSum(testSize);
+        tEnd = System.nanoTime();
+        System.out.println(" Direct time:" + (tEnd - tBeg));
+
+        SubExpressionsElimination test2 = new SubExpressionsElimination();
+        tBeg = System.nanoTime();
+        test2.exampleNoElimination();
+        tEnd = System.nanoTime();
+        System.out.println("\n\nSub Expression elimination (preassigned numbers)\n Before time:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test2.exampleElimination();
+        tEnd = System.nanoTime();
+        System.out.println(" After time:" + (tEnd - tBeg));
+
+        SubExpressionsElimination2 test3 = new SubExpressionsElimination2();
+        // Initialize random number generator: do it in the class or here?
+        // Random rd = new Random();
+        tBeg = System.nanoTime();
+
