@@ -230,6 +230,30 @@ static int testSize = 1000;
       test5.codeInsideLoop();
       timeEnd = System.nanoTime();
       System.out.println("\n\nCode Motion\n Before time:" + (timeEnd - timeBeginning));
+       timeBeginning = System.nanoTime();
+      test5.codeOutsideLoop();
+      timeEnd = System.nanoTime();
+      System.out.println(" After time:" + (timeEnd - timeBeginning));
+    }
+
+    //Test 6
+    public static void test6() {
+      ArrayListvsLinkedList test6 = new ArrayListvsLinkedList();
+      timeBeginning = System.nanoTime();
+      test6.arrayListCreation();
+      timeEnd = System.nanoTime();
+      System.out.println("\n\nArrayLists vs LinkedLists\n ArrayList Creation:" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test6.arrayListCreation();
+      timeEnd = System.nanoTime();
+      System.out.println(" LinkedList Creation:" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test6.arrayListAccess();
+      timeEnd = System.nanoTime();
+      System.out.println(" ArrayList Access:" + (timeEnd - timeBeginning));
+
 
   
 
