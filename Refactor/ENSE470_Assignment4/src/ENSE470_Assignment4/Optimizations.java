@@ -206,7 +206,7 @@ static int testSize = 1000;
       test3.exampleElimination();
       timeEnd = System.nanoTime();
       System.out.println(" After time:" + (timeEnd - timeBeginning));
-    }///////////////
+    }
 
   
 
