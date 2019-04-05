@@ -253,6 +253,28 @@ static int testSize = 1000;
       test6.arrayListAccess();
       timeEnd = System.nanoTime();
       System.out.println(" ArrayList Access:" + (timeEnd - timeBeginning));
+      
+       timeBeginning = System.nanoTime();
+      test6.arrayListAccess();
+      timeEnd = System.nanoTime();
+      System.out.println(" LinkedList Access:" + (timeEnd - timeBeginning));
+    }
+
+    //Test 7
+    public static void test7() {
+      StringOperations test7 = new StringOperations();
+      timeBeginning = System.nanoTime();
+      test7.usingPlus();
+      timeEnd = System.nanoTime();
+      System.out.println("\n\nString Operations\n Using + :" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test7.usingStringBuffer();
+      timeEnd = System.nanoTime();
+      System.out.println(" Using StringBuffer :" + (timeEnd - timeBeginning));
+    }
+} 
+
 
 
   
