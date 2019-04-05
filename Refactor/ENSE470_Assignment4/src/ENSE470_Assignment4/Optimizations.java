@@ -92,5 +92,28 @@ static int testSize = 1000;
         CodeMotion test5 = new CodeMotion();
         // Note that the default constructor is lazy and initializes only when the class is needed in this case
         tBeg = System.nanoTime();
+         test5.codeInsideLoop();
+        tEnd = System.nanoTime();
+        System.out.println("\n\nCode Motion\n Before time:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test5.codeOutsideLoop();
+        tEnd = System.nanoTime();
+        System.out.println(" After time:" + (tEnd - tBeg));
+
+        ArrayListvsLinkedList test6 = new ArrayListvsLinkedList();
+        tBeg = System.nanoTime();
+        test6.arrayListCreation();
+        tEnd = System.nanoTime();
+        System.out.println("\n\nArrayLists vs LinkedLists\n ArrayList Creation:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test6.arrayListCreation();
+        tEnd = System.nanoTime();
+        System.out.println(" LinkedList Creation:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test6.arrayListAccess();
+        tEnd = System.nanoTime();
 
 
