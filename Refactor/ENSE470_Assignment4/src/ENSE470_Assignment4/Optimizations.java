@@ -69,4 +69,28 @@ static int testSize = 1000;
         // Initialize random number generator: do it in the class or here?
         // Random rd = new Random();
         tBeg = System.nanoTime();
+         test3.exampleNoElimination();
+        tEnd = System.nanoTime();
+        System.out.println("\n\nSub Expression elimination (random numbers)\n Before time:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test3.exampleElimination();
+        tEnd = System.nanoTime();
+        System.out.println(" After time:" + (tEnd - tBeg));
+
+        SubExpressionsElimination3 test4 = new SubExpressionsElimination3();
+        tBeg = System.nanoTime();
+        test4.exampleNoElimination();
+        tEnd = System.nanoTime();
+        System.out.println("\n\nSub Expression elimination (random numbers in constructor)\n Before time:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test4.exampleElimination();
+        tEnd = System.nanoTime();
+        System.out.println(" After time:" + (tEnd - tBeg));
+
+        CodeMotion test5 = new CodeMotion();
+        // Note that the default constructor is lazy and initializes only when the class is needed in this case
+        tBeg = System.nanoTime();
+
 
