@@ -184,6 +184,30 @@ static int testSize = 1000;
       timeBeginning = System.nanoTime();
       test2.exampleNoElimination();
       timeEnd = System.nanoTime();
+       System.out.println("\n\nSub Expression elimination (preassigned numbers)\n Before time:" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test2.exampleElimination();
+      timeEnd = System.nanoTime();
+      System.out.println(" After time:" + (timeEnd - timeBeginning));
+    }
+
+    //Test 3
+    public static void test3() {
+      SubExpressionsElimination2 test3 = new SubExpressionsElimination2();
+      // Initialize random number generator: do it in the class or here?
+      // Random rd = new Random();
+      timeBeginning = System.nanoTime();
+      test3.exampleNoElimination();
+      timeEnd = System.nanoTime();
+      System.out.println("\n\nSub Expression elimination (random numbers)\n Before time:" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test3.exampleElimination();
+      timeEnd = System.nanoTime();
+      System.out.println(" After time:" + (timeEnd - timeBeginning));
+    }///////////////
+
   
 
         
