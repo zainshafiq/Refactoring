@@ -207,6 +207,29 @@ static int testSize = 1000;
       timeEnd = System.nanoTime();
       System.out.println(" After time:" + (timeEnd - timeBeginning));
     }
+    
+    //Test 4
+    public static void test4() {
+      SubExpressionsElimination3 test4 = new SubExpressionsElimination3();
+      timeBeginning = System.nanoTime();
+      test4.exampleNoElimination();
+      timeEnd = System.nanoTime();
+      System.out.println("\n\nSub Expression elimination (random numbers in constructor)\n Before time:" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test4.exampleElimination();
+      timeEnd = System.nanoTime();
+      System.out.println(" After time:" + (timeEnd - timeBeginning));
+    }
+
+    //Test 5
+    public static void test5() {
+      CodeMotion test5 = new CodeMotion();
+      // Note that the default constructor is lazy and initializes only when the class is needed in this case
+      timeBeginning = System.nanoTime();
+      test5.codeInsideLoop();
+      timeEnd = System.nanoTime();
+      System.out.println("\n\nCode Motion\n Before time:" + (timeEnd - timeBeginning));
 
   
 
