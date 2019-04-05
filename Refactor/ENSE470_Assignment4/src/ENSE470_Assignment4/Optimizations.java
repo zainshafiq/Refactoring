@@ -230,7 +230,8 @@ static int testSize = 1000;
       test5.codeInsideLoop();
       timeEnd = System.nanoTime();
       System.out.println("\n\nCode Motion\n Before time:" + (timeEnd - timeBeginning));
-       timeBeginning = System.nanoTime();
+       
+      timeBeginning = System.nanoTime();
       test5.codeOutsideLoop();
       timeEnd = System.nanoTime();
       System.out.println(" After time:" + (timeEnd - timeBeginning));
