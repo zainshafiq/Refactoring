@@ -115,5 +115,30 @@ static int testSize = 1000;
         tBeg = System.nanoTime();
         test6.arrayListAccess();
         tEnd = System.nanoTime();
+         System.out.println(" ArrayList Access:" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test6.arrayListAccess();
+        tEnd = System.nanoTime();
+        System.out.println(" LinkedList Access:" + (tEnd - tBeg));
+
+        StringOperations test7 = new StringOperations();
+        tBeg = System.nanoTime();
+        test7.usingPlus();
+        tEnd = System.nanoTime();
+        System.out.println("\n\nString Operations\n Using + :" + (tEnd - tBeg));
+
+        tBeg = System.nanoTime();
+        test7.usingStringBuffer();
+        tEnd = System.nanoTime();
+        System.out.println(" Using StringBuffer :" + (tEnd - tBeg));
+
+        System.out.println("\n\nTests complete, end of program");
+        ----------------------------------------------------------------------------------------------------
+        Refactor #4 : Extract Method
+        Instead of declared and call all different test codes, I decided to extract the codes and separate them into different methods/functions.
+        By this, I can only use the main function only to call said methods/functions.
+        */
+        
 
 
