@@ -162,6 +162,29 @@ static int testSize = 1000;
     //Test 1
     public static void test1() {
       StrengthReduction test1 = new StrengthReduction();
+      timeBeginning = System.nanoTime();
+      test1.recursiveSum(testSize);
+      timeEnd = System.nanoTime();
+      System.out.println("Strength reduction\n Recursive time:" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test1.unreducedSum(testSize);
+      timeEnd = System.nanoTime();
+      System.out.println(" Iterative time:" + (timeEnd - timeBeginning));
+
+      timeBeginning = System.nanoTime();
+      test1.reducedSum(testSize);
+      timeEnd = System.nanoTime();
+      System.out.println(" Direct time:" + (timeEnd - timeBeginning));
+    }
+
+    //Test 2
+    public static void test2() {
+      SubExpressionsElimination test2 = new SubExpressionsElimination();
+      timeBeginning = System.nanoTime();
+      test2.exampleNoElimination();
+      timeEnd = System.nanoTime();
+  
 
         
 
