@@ -44,7 +44,7 @@ static int testSize = 1000;
         tEnd = System.nanoTime();
         System.out.println("Strength reduction\n Recursive time:" + (tEnd - tBeg));
         
-         tBeg = System.nanoTime();
+        tBeg = System.nanoTime();
         test1.unreducedSum(testSize);
         tEnd = System.nanoTime();
         System.out.println(" Iterative time:" + (tEnd - tBeg));
