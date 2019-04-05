@@ -140,5 +140,29 @@ static int testSize = 1000;
         By this, I can only use the main function only to call said methods/functions.
         */
         
+        System.out.println("Optimization example program\n\n");
+
+        test1(); //Test 1
+
+        test2(); //Test 2
+
+        test3(); //Test 3
+
+        test4(); //Test 4
+
+        test5(); //Test 5
+
+        test6(); //Test 6
+
+        test7(); //Test 7
+
+        System.out.println("\n\nTests complete, end of program");
+    }
+
+    //Test 1
+    public static void test1() {
+      StrengthReduction test1 = new StrengthReduction();
+
+        
 
 
